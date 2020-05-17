@@ -75,3 +75,16 @@ export const makeTransaction = (
 		dispatch(setAlert('Transaction Failed', 'danger'));
 	}
 };
+
+// Go to Details Page
+export const detailsPage = type => async dispatch => {
+	try {
+		dispatch({
+			type: type,
+		});
+	} catch (err) {
+		dispatch({
+			type: 'ERROR_GETTING_DETAILS',
+		});
+	}
+};

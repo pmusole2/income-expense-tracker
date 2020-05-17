@@ -26,7 +26,7 @@ const Navbar = ({ isAuthenticated, logout }) => {
 			</li>
 			<li>
 				<Link onClick={() => setChecked(false)} to='/about'>
-					About
+					About App
 				</Link>
 			</li>
 			<li>
@@ -70,16 +70,21 @@ const Navbar = ({ isAuthenticated, logout }) => {
 
 	return (
 		<Fragment>
-			<h1
-				style={{
-					textAlign: 'center',
-					color: 'white',
-					backgroundColor: 'black',
-					padding: '8px',
-				}}
-			>
-				Expense Tracker
-			</h1>
+			<Link to='/'>
+				<h1
+					style={{
+						textAlign: 'center',
+						color: 'white',
+						backgroundColor: 'black',
+						padding: '8px',
+						position: 'fixed',
+						top: 0,
+						width: '100vw',
+					}}
+				>
+					Expense Tracker
+				</h1>
+			</Link>
 			<div className='menu-wrap'>
 				<input
 					type='checkbox'

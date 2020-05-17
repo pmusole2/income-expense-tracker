@@ -14,6 +14,7 @@ const initialState = {
 	transactions: null,
 	redirect: false,
 	error: {},
+	details: null,
 };
 
 export default (state = initialState, action) => {
@@ -38,6 +39,24 @@ export default (state = initialState, action) => {
 				transactions: [payload, ...state.transactions],
 				loading: false,
 				redirect: true,
+			};
+		case 'GET_EXPENSES':
+			return {
+				...state,
+				details: null,
+				details: state.transactions.filter(
+					transaction => transaction.type !== 'expense'
+				),
+				loading: false,
+			};
+		case 'GET_INCOMES':
+			return {
+				...state,
+				details: null,
+				details: state.transactions.filter(
+					transaction => transaction.type !== 'income' && transaction
+				),
+				loading: false,
 			};
 		case BALANCE_UPDATED:
 			return {

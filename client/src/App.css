@@ -7,11 +7,54 @@
 	--success-color: #28a745;
 }
 
+.developer-container {
+	background-color: #fff;
+	/* box-shadow: var(--box-shadow); */
+	position: relative;
+	top: 310px;
+	left: 50%;
+	border-radius: 20px;
+	transform: translate(-50%, -50%);
+	width: 85%;
+	padding: 20px;
+	height: 400px;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+	-webkit-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+}
+
+img.dev-img {
+	width: 140px;
+	border-radius: 45%;
+	height: 160px;
+	margin-bottom: 25px;
+}
+
+.developer-container h3 {
+	margin-top: 20px;
+}
+
+.developer-container h4 {
+	margin-top: 20px;
+}
+
+.developer-container > div {
+	flex: 1;
+	text-align: center;
+}
+
+.developer-container > div:first-of-type {
+	border-right: 2.5px solid #dedede;
+}
+
 .income-expense-container {
 	background-color: #fff;
 	/* box-shadow: var(--box-shadow); */
 	position: relative;
-	top: 110px;
+	top: 150px;
 	left: 50%;
 	border-radius: 10px;
 	transform: translate(-50%, -50%);
@@ -51,7 +94,7 @@
 .transactions-container {
 	position: relative;
 	width: 65%;
-	top: 200px;
+	top: 240px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -113,5 +156,20 @@
 
 	.lead {
 		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 485px) {
+	.developer-container {
+		display: block;
+		top: 270px;
+		z-index: -1;
+	}
+	.income-expense-container {
+		margin-top: 50px;
+	}
+
+	.transactions-container {
+		width: 95%;
 	}
 }

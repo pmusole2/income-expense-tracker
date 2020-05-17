@@ -17,6 +17,9 @@ import store from './store';
 import Alert from './components/Alert';
 import { loadUser } from './actions/auth';
 import PrivateRoute from './components/routing/PrivateRoute';
+import { About } from './components/about-page/About';
+import AboutDeveloper from './components/about-page/AboutDeveloper';
+import DetailsPage from './components/DetailsPage';
 
 if (localStorage.token) {
 	setAuthToken(localStorage.token);
@@ -38,7 +41,9 @@ const App = () => {
 						<Route exact path='/register' component={Register} />
 						<Route exact path='/login' component={Login} />
 						<PrivateRoute exact path='/add' component={AddTransaction} />
-						<Redirect to='/' />
+						<Route exact path='/about' component={About} />
+						<Route exact path='/developer' component={AboutDeveloper} />
+						<PrivateRoute exact path='/details' component={DetailsPage} />
 					</Switch>
 				</div>
 			</Router>
