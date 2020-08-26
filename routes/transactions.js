@@ -6,8 +6,6 @@ const { check, validationResult } = require('express-validator');
 const Transaction = require('../models/Transactions');
 const { tokenL } = require('../routes/auth');
 
-// const token =
-// 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWViZmFmYjcwMGVmNDQzNGQ1ZGIxZWU0In0sImlhdCI6MTU4OTYyMDY2NCwiZXhwIjoxNTg5OTgwNjY0fQ.GeFks3Mx5NaJ-wFgXuylIVAAYvX1HELhhD_K2nuBO0U';
 
 // const updateAccount = async (amount, type) => {
 // 	const config = {
@@ -31,7 +29,7 @@ const { tokenL } = require('../routes/auth');
 // };
 
 // @route       GET api/transactions
-// @desc        Make a transaction
+// @desc        Get Users Transactions
 // @access      private
 router.get('/', auth, async (req, res) => {
 	try {
